@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="image"><img src="./assets/courses/cipher.jpeg" alt="" width="700px" height="400px"></div>
+    <div class="app-caesar-cipher">
+      <h2>Caesar Cipher</h2>
+      <div class="input-group">
+        <label>Enter plain text:</label>
+        <input [(ngModel)]="plainText">
+      </div>
+      <div class="input-group">
+        <label>Enter shift value:</label>
+        <input type="number" [(ngModel)]="shiftValue">
+      </div>
+      <div class="button-group">
+        <button (click)="encrypt()">Encrypt</button>
+        <button (click)="decrypt()">Decrypt</button>
+      </div>
+      <div class="output-group">
+        <label>Cipher text:</label>
+        <p>{{cipherText}}</p>
+      </div>
+    </div>
+  </div>
+  
+  

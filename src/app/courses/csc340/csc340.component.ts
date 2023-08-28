@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./csc340.component.css']
 })
 export class Csc340Component {
+  rsa = false
 
+
+  openrsa(){
+    this.rsa = !this.rsa
+  }
+  
 }

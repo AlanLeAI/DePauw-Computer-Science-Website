@@ -1,1 +1,24 @@
-<p>rsa works!</p>
+<img src="./assets/images/RSA.gif" alt="">
+
+<div>
+  <label for="p">Enter prime number p: </label>
+  <input id="p" [(ngModel)]="p" /><br />
+  <label for="q">Enter prime number q: </label>
+  <input id="q" [(ngModel)]="q" /><br />
+  <label for="message">Enter message to encrypt: </label>
+  <input id="message" [(ngModel)]="message" /><br />
+  <button (click)="generateKeys()">Generate Keys</button>
+  <div class="keypair">
+    (Public Key) e = {{e}}
+    <br>
+    (Public Key) n = {{n}}
+    <br>
+    (Private Key) d = {{d}}
+  </div>
+  <button (click)="encrypt()">Encrypt</button>
+  <button (click)="decrypt()">Decrypt</button>
+
+  <div *ngIf="result">
+    <p>Result: {{ result }}</p>
+  </div>
+</div>

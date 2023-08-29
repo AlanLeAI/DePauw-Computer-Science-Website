@@ -1,0 +1,168 @@
+.hash-table-entry {
+    display: flex;
+    align-items: center;
+    left: 30%;
+    position: relative;
+    justify-content: left;
+  }
+  
+  
+  
+  .arrow-line {
+    position: flex;
+    right: -35px;
+    top: 20px;
+    height: 10px;
+    width: 30px;
+    background-color: gray;
+  }
+  
+  .arrow-right {
+    position: flex;
+    right: -55px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 20px solid gray;
+  }
+  
+  .key-box {
+    width: 100px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border: solid 5px rgb(33, 142, 33);
+    margin-right: 4 px;
+    margin-top: 5px;
+  }
+  
+  .key-box, .value-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .value-boxes {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center ;s */
+  }
+  
+  .value-box {
+    width: 100px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border: solid 5px rgb(33, 142, 33);
+    margin-right: 3px;
+    margin-top: 10px;
+  }
+  
+  .node-content{
+    text-align: center;
+    font-weight: 1000;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    color: orange;
+  }
+  
+  .hashmap{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .explain{
+    margin-left: 32%;
+    font-weight: 1000;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    color: orange;
+    word-spacing: 30px;
+  }
+  
+  .chapter-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: coral;
+    font-weight: 600;
+  }
+  
+  .bubble-sort-btn{
+    display: inline-block; /* Use flexbox layout */
+    justify-content: center; /* Center the buttons horizontally */
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 30%;
+  }
+  
+  .bubble-sort-btn button {
+    background-color: #d0b640;
+    color: white;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+    border: none;
+    margin: 10px;
+    font-family: "Open Sans";
+  }
+  
+  .bubble-sort-btn button:hover {
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    font-family: "Open Sans";
+  }
+  
+  .bubble-sort-btn button:active {
+    color: #0066cc;
+    background-color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    /* border: none; */
+    outline: none;
+    border: 2px solid #0066cc;
+    font-family: "Open Sans";
+  }
+  
+  #array-popup {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+    
+  #array-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  }
+  
+  
+  
+  

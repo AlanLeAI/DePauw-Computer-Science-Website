@@ -1,1 +1,17 @@
-<p>ecc works!</p>
+<img src="./assets/images/ECC.gif" alt="">
+
+
+<div>
+    <label for="plaintext">Plaintext:</label>
+    <textarea id="plaintext" [(ngModel)]="plaintext"></textarea>
+  </div>
+  <div>
+    <label for="publicKey">Public Key:</label>
+    <textarea id="publicKey" [(ngModel)]="publicKey"></textarea>
+  </div>
+  <div>
+    <label for="encrypted">Encrypted:</label>
+    <textarea id="encrypted">{{encrypted}}</textarea>
+  </div>
+  <button (click)="encrypt()">Encrypt</button>
+  <button (click)="decrypt()">Decrypt</button>

@@ -1,0 +1,98 @@
+
+.container{
+    margin: 10px 0px;
+    padding: 10px 10px;
+    border-radius: 5px;
+
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+.course-container{
+    display: flex;
+}
+
+.course-card{
+    width:100%;
+    height: 95%;
+    
+    background-color: #ddcc88;
+    display: inline-flex;
+}
+.course-name{
+    text-align: left;
+    width: 25%;
+}
+.course-description{
+    /* margin: 10px 0px;
+    padding: 5px 10px; */
+    font-size: 14px;
+    width: 50%;
+    text-align: justify;
+    padding-right: 5px;
+}
+
+.details{
+    display: flex;
+    margin: 10px 0px;
+}
+.course-credit{
+    font-weight: bold;
+    display: flex;
+    width: 35%;
+}
+.course-code{
+    font-weight: bold;
+    display: relative;
+    width: 35%;
+    right: 30%;
+}
+.course-buttons{
+    display: flex;
+}
+/* .btn{
+    width: 140px;
+    height: 30px;
+    border: none;
+    margin: 5px 3px;
+}
+.btn-buy{
+    background-color: #EC7063;
+}
+.btn-show{
+    background-color: #ABEBC6;
+} */
+
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  .btn:active {
+    background-color: #4CAF50;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

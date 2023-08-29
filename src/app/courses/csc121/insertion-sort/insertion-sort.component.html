@@ -1,1 +1,22 @@
-<p>insertion-sort works!</p>
+
+
+
+
+<div class="main-container">
+    
+    <div class = "bubble-sort-btn">
+        <div class="chapter-header">
+            Insertion Sort Algorithm
+        </div>
+        <button class="sort-btn" (click)="insertionSort()">Insertion Sort</button>
+        <button class="new-array-btn" (click)="generateArray()">Generate New Array</button>
+        <button class="stop-array-btn" (click)="stopSort()">Stop</button>
+    </div>
+    
+    <div class="container">
+        <div class="element" *ngFor="let item of items" [@swap]="item.state" [style.height.px]="item.value*2" [style.background-color]="item.color"  [ngStyle]="{'margin-left.px': item.x}">
+            {{item.value}}
+        </div>
+    </div>
+</div>
+

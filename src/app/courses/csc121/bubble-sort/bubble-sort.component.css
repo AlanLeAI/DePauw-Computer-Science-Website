@@ -1,0 +1,72 @@
+.main-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: #0066cc;
+  }
+  
+  .chapter-header{
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 60px ;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .container {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 300px;
+    width: 50%;
+    justify-items: center;
+    
+  }
+  
+  .element {
+    text-align: center;
+    width: 25px;
+    margin-right: 2px;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  
+  .bubble-sort-btn{
+    display: inline-block; /* Use flexbox layout */
+    justify-content: center; /* Center the buttons horizontally */
+    width: 50%;
+    margin-left: auto;
+  }
+  
+  .bubble-sort-btn button {
+    background-color: #d0b640;
+    color: white;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+    border: none;
+    margin: 10px;
+    font-family: "Open Sans";
+  }
+  
+  .bubble-sort-btn button:hover {
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    font-family: "Open Sans";
+  }
+  
+  .bubble-sort-btn button:active {
+    color: #0066cc;
+    background-color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    /* border: none; */
+    outline: none;
+    border: 2px solid #0066cc;
+    font-family: "Open Sans";
+  }

@@ -1,1 +1,19 @@
-<p>selection-sort works!</p>
+
+
+<div class="main-container">
+    
+    <div class = "bubble-sort-btn">
+        <div class="chapter-header">
+            Selection Sort Algorithm
+        </div>
+        <button class="sort-btn" (click)="selectionSort()"><b>Selection Sort</b></button>
+        <button class="new-array-btn" (click)="generateArray()"><b>Generate New Array</b></button>
+        <button class="stop-array-btn" (click)="stopSort()">Stop</button>
+    </div>
+    
+    <div class="container">
+        <div class="element" *ngFor="let item of items"  [style.height.px]="item.value*2" [ngStyle]="{'margin-left.px': item.x, 'background-color': item.state === 'inactive' ? 'lightblue' : 'red'}">
+            {{item.value}}
+          </div>
+    </div>
+</div>

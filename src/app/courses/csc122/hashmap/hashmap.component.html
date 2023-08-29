@@ -1,1 +1,58 @@
-<p>hashmap works!</p>
+<h1 class="chapter-header">
+    Hash Table
+  </h1>
+  
+  <div class="hashmap">
+    <div class="explain"> Key   ->    Value</div>
+    <div *ngFor="let key of logKeys()" class="hash-table-entry">
+      <div class="key-box">
+        <div class="node-content">
+          {{key}}
+        </div>
+        
+      </div>
+      <div class="arrow-line"></div>
+      <div class="arrow-right"></div>
+      <div class="value-boxes">
+        <div *ngFor="let value of myHashTable[key]" class="value-box">
+          <div class="node-content">
+            {{value}}
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    <div class = "bubble-sort-btn">
+      <button class="sort-btn" (click)="addValue()">Add Value to Key</button>
+      <button class="new-array-btn" (click)="addKey()">Add New Key</button>
+      <button class="stop-array-btn">Find a Value</button>
+    </div>
+  </div>
+  
+  <div id="array-popup" *ngIf="close === false && addValueBtn === true">
+    <div id="array-popup-content" >
+      <span class="close" (click)="Onclose()">&times;</span>
+  
+      <label>Choose the key to add:</label>
+      <input id="input-new-array" placeholder="1,2,3,4,5" [(ngModel)]="key"/>
+      <br>  
+      <label>Enter the value to be added:</label>
+      <input id="input-new-array" placeholder="1,2,3,4,5" [(ngModel)]="value"/>
+      <br /><br>
+      <button type="submit" id="submit-array" (click)="onSubmitAddvalue()">Submit Array</button>
+    </div>
+  </div>
+  
+  <div id="array-popup" *ngIf="close === false && addKeyBtn === true">
+    <div id="array-popup-content" >
+      <span class="close" (click)="Onclose()">&times;</span>
+  
+      <label>Choose the key to add:</label>
+      <input id="input-new-array" placeholder="1,2,3,4,5" [(ngModel)]="newkey"/>
+      <br>  
+    
+      <button type="submit" id="submit-array" (click)="onSubmitAddKey()">Submit Array</button>
+    </div>
+  </div>
+  
+  

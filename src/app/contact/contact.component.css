@@ -1,0 +1,74 @@
+.container{
+    text-align: center;
+}
+.dark-mode {
+    background-color: black;
+    color: #FF8C00;
+}
+body {
+    background-color: #FEF4B9;
+}
+.container{
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.column {
+    float: left;
+    width: 33%;
+    
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: flex;
+    clear: both;
+}
+
+.info{
+    text-align: left;
+}
+
+
+.profile-link {
+    display: inline-block;
+}
+.profile-pic {
+    width: 300px;
+    height: 400px;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+
+    border:2px solid #fff;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    transition: filter 0.3s, box-shadow 0.3s;
+    -webkit-transition: filter 0.3s, -webkit-filter 0.3s, box-shadow 0.3s;
+}
+.profile-link:hover .profile-pic, 
+.profile-link:focus .profile-pic {
+    -webkit-filter: none;
+    filter: none;
+    box-shadow: #224 0.2em 0.2em 0.6em 0.1em;
+}
+
+.container .row .column .description{
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    width: 90%;
+    margin-top: 20px;
+    border:2px solid #fff;
+    
+    border-radius: 2em;
+}

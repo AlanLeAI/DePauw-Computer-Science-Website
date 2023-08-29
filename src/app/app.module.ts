@@ -27,6 +27,7 @@ import { SelectionSortComponent } from './courses/csc121/selection-sort/selectio
 import { HashmapComponent } from './courses/csc122/hashmap/hashmap.component';
 import { RsaComponent } from './courses/csc340/rsa/rsa.component';
 import { EccComponent } from './courses/csc340/ecc/ecc.component';
+import { CaesarCipherComponent } from './courses/csc340/caesar-cipher/caesar-cipher.component';
 
 
 
@@ -55,6 +56,7 @@ import { EccComponent } from './courses/csc340/ecc/ecc.component';
     RsaComponent,
     RsaComponent,
     EccComponent,
+    CaesarCipherComponent,
   ],
   imports: [
     BrowserModule,

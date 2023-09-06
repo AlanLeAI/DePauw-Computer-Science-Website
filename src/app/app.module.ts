@@ -28,6 +28,7 @@ import { HashmapComponent } from './courses/csc122/hashmap/hashmap.component';
 import { RsaComponent } from './courses/csc340/rsa/rsa.component';
 import { EccComponent } from './courses/csc340/ecc/ecc.component';
 import { CaesarCipherComponent } from './courses/csc340/caesar-cipher/caesar-cipher.component';
+import { ForloopComponent } from './courses/csc121/forloop/forloop.component';
 
 
 
@@ -57,6 +58,7 @@ import { CaesarCipherComponent } from './courses/csc340/caesar-cipher/caesar-cip
     RsaComponent,
     EccComponent,
     CaesarCipherComponent,
+    ForloopComponent,
   ],
   imports: [
     BrowserModule,

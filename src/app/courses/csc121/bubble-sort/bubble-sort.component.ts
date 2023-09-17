@@ -31,7 +31,12 @@ interface Item {
 
 export class BubbleSortComponent implements OnInit{
   items: Item[]= [];
-  width = 0.5
+  width = 0.5 
+  input1 = "" 
+  input2 = ""
+  input3 = ""
+  checkres = false
+  clickpractice = false
 
   ngOnInit() {
     this.generateArray()
@@ -81,5 +86,24 @@ export class BubbleSortComponent implements OnInit{
   stopSort(){
     this.stopSor = true
   }
+
+  checkInput(){
+    if( this.input1 == "i+1" || this.input1 == " i + 1 " ||  this.input1 == "i + 1" ||  this.input1 == "i+ 1"){
+      if(this.input2 == "i" && this.input3 == "j"){
+        this.checkres = true
+      }
+      else if(this.input2 == "j" && this.input3 == "i"){
+        this.checkres = true
+      }
+    }
+    else{
+      this.checkres = false
+    }
+  }
+
+  practiceCode(){
+    this.clickpractice = !this.clickpractice
+  }
+
 }
 

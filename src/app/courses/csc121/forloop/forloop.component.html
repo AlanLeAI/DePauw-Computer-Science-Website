@@ -1,1 +1,58 @@
-<p>forloop works!</p>
+
+<div class="container">
+    <h2>Find Two Numbers with Sum K</h2>
+    <p>Fill in the missing parts of the code to find two numbers in the array that have a sum equal to K. Return -1, if we can not find. Otherwise, return the two number</p>
+
+    <div class="array-table center">
+        <div class="array-length">Array Length: {{arr.length}}</div>
+        <div class="array-display">
+            <div class="array-element" *ngFor="let ele of arr; let i = index">
+                <div>
+                    {{ele}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label for="kValue">Enter K:</label>
+        <input type="number" id="kValue" [(ngModel)]="k" (ngModelChange)="resetResults()" />
+    </div>
+
+    <div>
+        <label for="result">Result:</label>
+        <span id="result" *ngIf="result === -1">{{ result }}</span>
+        <span id="result2" *ngIf="!(result === -1)">({{ele1}}, {{ele2}})</span>
+    </div>
+
+    <hr />
+
+    <div>
+        <h3>Code to Complete:</h3>
+        <pre>
+        <div class="practice">
+            <div class="code">
+                <code>
+for (int i = 0; i < array.length; i++) {{ '{' }}
+    for (int j = <input type="text" id="startvalue" [(ngModel)]="idx" (ngModelChange)="checkInput()"/>; j < array.length; j++) {{ '{' }}
+        if (array[i] + array[j] == k) {{ '{' }}
+            return (array[i], arr[j]);
+        {{ '}' }}
+    {{ '}' }}
+{{ '}' }}
+return -1;
+            </code>
+            </div>
+
+            <div class="solution" *ngIf="idx">
+                <div class="checkRes incorrect" *ngIf="!checkres"> 
+                    <p>You Make A Mistake!</p>
+                </div>
+                <div class="checkRes correct" *ngIf="checkres"> 
+                    <p>You Are Correct!</p>
+                </div>
+            </div>
+        </div>
+        </pre>
+    </div>
+</div>

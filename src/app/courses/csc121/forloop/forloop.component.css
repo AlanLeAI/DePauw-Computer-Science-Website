@@ -1,0 +1,125 @@
+/* Add your CSS styles here to customize the component's appearance */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
+  
+  label {
+    font-weight: bold;
+
+  }
+  p{
+    font-family: "Open Sans";
+    font-weight: bold;
+  }
+  h2{
+    font-family: "Open Sans";
+    font-weight: bold;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  
+  #result {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+  
+.practice {
+  display: flex; /* Use flexbox to align items side by side */
+  align-items:center; /* Align items at the top */
+}
+
+/* Style for the code div */
+.code {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Open Sans";
+}
+#startvalue {
+  border: 3px solid rgb(255, 191, 0);
+}
+
+/* Style for the solution div */
+.solution {
+    padding: 10px; /* Add padding for spacing */
+    width: fit-content;
+    margin: auto;
+    height: fit-content;
+}
+
+/* Style for correct message */
+.checkRes.correct {
+    border: 2px solid green; /* Add a green border */
+    background-color: green;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Open Sans";
+    padding: 10px; /* Add padding for spacing */
+}
+
+/* Style for incorrect message */
+.checkRes.incorrect {
+    border: 2px solid red; /* Add a red border */
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Open Sans";
+    padding: 10px; /* Add padding for spacing */
+}
+
+
+.array-table{
+  text-align: center;
+  display: inline-block;
+  font-size: large;
+  width: fit-content;
+  margin: auto;
+}
+
+.center{
+  left: 50%;
+  top: 30%;
+  padding: 2px;
+  display: block;
+}
+.array-display{
+  font-size: 3em;
+  font-weight: 200;
+  display: inline-flex;
+  margin: auto;
+  border-collapse: collapse;
+  width: fit-content;
+  /* border: 1px solid black; */
+}
+
+.array-element{
+  color: #ffb449;
+  width: fit-content;
+  margin-right: 3px;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid #7cb896;
+  padding: 0.5ch;
+  font-family: 'Press Start 2P', cursive;
+}

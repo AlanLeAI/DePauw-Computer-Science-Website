@@ -1,0 +1,85 @@
+<h1 class="chapter-header">
+    Queue
+</h1>
+
+
+<div class="table-container">
+    <p>A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle.</p>
+    
+    <h2>Operators of Queue and Runtime</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Runtime</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>enqueue(item)</td>
+                <td>Adds an item to the end of the queue.</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>dequeue()</td>
+                <td>Removes and returns the item from the front of the queue.</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>peek()</td>
+                <td>Returns the item at the front of the queue without removing it.</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>isEmpty()</td>
+                <td>Checks if the queue is empty.</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>size()</td>
+                <td>Returns the number of items in the queue.</td>
+                <td>O(1)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="array-table-buttons">
+    <button id="array-popup-button" (click)="enqueuePush()"><b>Enqueue</b></button><br>
+    <button id="access" (click)="dequeue()"><b>Dequeue</b></button>
+</div>
+
+
+<div class="queue-size">Size of the Queue: <span style="color: orange; font-weight: bold; font-size: 2rem;">{{ items.length }}</span> </div>
+
+<div class="container">
+    <div class="node" *ngFor="let item of items; let i = index">
+        <div class="arrow-line"></div>
+        <div class="arrow-right"></div>
+        <div class="node-content">
+            <div [ngStyle]="{'background-color': (i === this.currIndex) ? '#F5F5DC':'white'}">
+            <p>{{ item }}</p>
+        </div>
+        </div>
+        
+    </div>
+</div>
+
+  
+<div id="array-popup" *ngIf="onEnqueue === true && onClose === false">
+    <div id="array-popup-content">
+      <span class="close" (click)="close()">&times;</span>
+
+      <label>Enter new values to enter the Queue</label>
+      <input id="input-new-array" placeholder="An interger" [(ngModel)]="enqueueVal"/>
+      <br /><br>
+      <button type="submit" id="submit-array" (click)="enqueue()">Submit Array</button>
+    </div>
+</div>
+
+
+
+
+
+

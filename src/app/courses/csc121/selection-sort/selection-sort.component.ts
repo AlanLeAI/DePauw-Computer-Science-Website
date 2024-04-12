@@ -32,6 +32,10 @@ export class SelectionSortComponent {
   items: Item[]= [];
   width = 0.5
   activeIndex = -1
+  input1 = "" 
+  input2 = ""
+  checkres = false
+  clickpractice = false
 
   ngOnInit() {
     this.generateArray()
@@ -88,5 +92,18 @@ export class SelectionSortComponent {
   
   stopSort(){
     this.stopSor = true
+  }
+
+  checkInput(){
+    if( this.input1 == "minIndex" && this.input2 == this.input1){
+      this.checkres = true
+    }
+    else{
+      this.checkres = false
+    }
+  }
+
+  practiceCode(){
+    this.clickpractice = !this.clickpractice
   }
 }

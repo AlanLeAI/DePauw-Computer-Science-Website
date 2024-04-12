@@ -1,5 +1,3 @@
-
-
 <div class="container">
     <h2>All Courses</h2>
     <ng-container *ngFor="let course of courses">
@@ -9,7 +7,7 @@
                     <img [src]="course.image" width="355px" height="200px">
                 </div>
                 <div class="course-name"><h4>{{ course.name}}<br>Code: {{course.code}}</h4></div>
-                <div class="course-description"><p><b>Course Description</b>: {{course.description}}</p></div>
+                <div class="course-description"><p>{{course.description}}</p></div>
                 <div class="course-buttons">
                     <button class="btn btn-show" routerLink="/Courses/Course/{{course.id}}">Show Details</button>
                 </div>

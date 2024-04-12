@@ -26,10 +26,24 @@ import { SelectionSortComponent } from './courses/csc121/selection-sort/selectio
 // import { ContentComponent } from './courses/csc340/content/content.component';
 import { HashmapComponent } from './courses/csc122/hashmap/hashmap.component';
 import { RsaComponent } from './courses/csc340/rsa/rsa.component';
-import { EccComponent } from './courses/csc340/ecc/ecc.component';
 import { CaesarCipherComponent } from './courses/csc340/caesar-cipher/caesar-cipher.component';
 import { ForloopComponent } from './courses/csc121/forloop/forloop.component';
-
+import { DuplicateComponent } from './courses/csc121/duplicate/duplicate.component';
+import { MissingComponent } from './courses/csc121/missing/missing.component';
+import { CareerComponent } from './career/career.component';
+import { WindowRefService } from './courses/csc340/WindowRefService';
+import { IllustratedComponent } from './courses/csc340/illustrated/illustrated.component';
+import { BstComponent } from './courses/csc122/bst/bst.component';
+import { Arr2dComponent } from './courses/csc122/arr2d/arr2d.component';
+import { DatatypeComponent } from './courses/csc121/datatype/datatype.component';
+import { OperatorsComponent } from './courses/csc121/operators/operators.component';
+import { ClassobjectComponent } from './courses/csc121/classobject/classobject.component';
+import { Array1dComponent } from './courses/csc121/array1d/array1d.component';
+import { PracticeComponent } from './courses/csc121/practice/practice.component';
+import { PublickeyencComponent } from './courses/csc340/publickeyenc/publickeyenc.component';
+import { StackComponent } from './courses/csc122/stack/stack.component';
+import { QueueComponent } from './courses/csc122/queue/queue.component';
+import { DoublylinkedlistComponent } from './courses/csc122/doublylinkedlist/doublylinkedlist.component';
 
 
 @NgModule({
@@ -56,9 +70,23 @@ import { ForloopComponent } from './courses/csc121/forloop/forloop.component';
     HashmapComponent,
     RsaComponent,
     RsaComponent,
-    EccComponent,
     CaesarCipherComponent,
     ForloopComponent,
+    DuplicateComponent,
+    MissingComponent,
+    CareerComponent,
+    IllustratedComponent,
+    BstComponent,
+    Arr2dComponent,
+    DatatypeComponent,
+    OperatorsComponent,
+    ClassobjectComponent,
+    Array1dComponent,
+    PracticeComponent,
+    PublickeyencComponent,
+    StackComponent,
+    QueueComponent,
+    DoublylinkedlistComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +94,7 @@ import { ForloopComponent } from './courses/csc121/forloop/forloop.component';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [CoursesService],
+  providers: [CoursesService, WindowRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

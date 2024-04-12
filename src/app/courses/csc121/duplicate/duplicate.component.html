@@ -1,0 +1,47 @@
+
+<div class="container">
+    <h2>Detect Duplicate Number</h2>
+    <p>You are given an array of numbers. Your task is to determine if there are any duplicate numbers in the array. If there are duplicates, return True; otherwise, return False.</p>
+
+    <div class="array-table center">
+        <div class="array-length">Array Length: {{arr.length}}</div>
+        <div class="array-display">
+            <div class="array-element" *ngFor="let ele of arr; let i = index">
+                <div>
+                    {{ele}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div>
+        <h3>Code to Complete:</h3>
+        <pre>
+        <div class="practice">
+            <div class="code">
+                <code>
+for (int i = 0; i < array.length; i++) {{ '{' }}
+    for (int j = <input type="text" id="startvalue" [(ngModel)]="idx" (ngModelChange)="checkInput()"/>; j < array.length; j++) {{ '{' }}
+        if (array[j] == array[<input type="text" id="startvalue" [(ngModel)]="input2" (ngModelChange)="checkInput()"/>]) {{ '{' }}
+            return True;
+        {{ '}' }}
+    {{ '}' }}
+{{ '}' }}
+return False;
+            </code>
+            </div>
+
+            <div class="solution" *ngIf="idx">
+                <div class="checkRes incorrect" *ngIf="!checkres"> 
+                    <p>You Make A Mistake!</p>
+                </div>
+                <div class="checkRes correct" *ngIf="checkres"> 
+                    <p>You Are Correct!</p>
+                </div>
+            </div>
+        </div>
+        </pre>
+    </div>
+</div>

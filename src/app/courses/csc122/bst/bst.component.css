@@ -1,0 +1,374 @@
+/*Now the CSS*/
+.chapter-header{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: coral;
+  font-weight: 600;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.tree {
+  overflow: auto;
+  /* background: #eeeeee; */
+  padding-bottom: 10px;
+  min-height: 600px;
+}
+
+
+.tree ul {
+  position: relative;
+  padding: 1em 0;
+  white-space: nowrap;
+  margin: 0 auto;
+  text-align: center;
+}
+.tree ul::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.tree li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 1em .5em 0 .5em;
+}
+.tree li::before,
+.tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 4px solid #888;
+  width: 50%;
+  height: 1em;
+}
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 4px solid #888;
+}
+.tree li:only-child::after,
+.tree li:only-child::before {
+  display: none;
+}
+.tree li:only-child {
+  padding-top: 0;
+}
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+.tree li:last-child::before {
+  border-right: 4px solid #888;
+  border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 4px solid #888;
+  width: 0;
+  height: 1em;
+}
+
+.tree-add-button {
+  bottom: 7px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.tree-del-button {
+  width: 12px;
+  height: 12px;
+  bottom: 7px;
+  right: 5px;
+  cursor: pointer;
+}
+.tree-add-button,
+.tree-del-button,
+.tree-confirm-del-button {
+  position: absolute;
+  font-size: 12px;
+}
+
+div.tree h2:hover {
+  /* background: rgb(242, 242, 244); */
+  cursor: text;
+}
+
+.node {
+  color:orange;
+  background-color: white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: default;
+  border: 4px solid green;
+  display: inline-block;
+  padding: 5px;
+  line-height: 1.3em;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.node h2 {
+  font-size: 28px;
+  font-weight: bolder;
+  white-space: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.tree-add-button:hover,
+.tree-del-button:hover {
+  cursor: pointer;
+}
+
+/* Connector styles on hover */
+
+.tree li .node:hover+ul li::after,
+.tree li .node:hover+ul li::before,
+.tree li .node:hover+ul::before,
+.tree li .node:hover+ul ul::before {
+  border-color: orange;
+}
+
+.tree li:first-child::before {
+  content: '';
+  text-align: right;
+  padding-left: 5px;
+  right: 53%;
+  top: -2px;
+  vertical-align: top;
+}
+
+.tree li:last-child::after {
+  content: '';
+  text-align: left;
+  padding-left: 5px;
+  left: 53%;
+  top: -2px;
+  bottom: 50%;
+}
+
+
+.bubble-sort-btn{
+  display: inline-block; /* Use flexbox layout */
+  justify-content: center; /* Center the buttons horizontally */
+  width: 50%;
+  margin-top: 3%;
+  margin-left: 30%;
+}
+
+.bubble-sort-btn button {
+  background-color: #d0b640;
+  color: white;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px gray;
+  border: none;
+  margin: 10px;
+  font-family: "Open Sans";
+}
+
+.bubble-sort-btn button:hover {
+  background-color: orange;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  font-family: "Open Sans";
+}
+
+.bubble-sort-btn button:active {
+  color: #0066cc;
+  background-color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  /* border: none; */
+  outline: none;
+  border: 2px solid #0066cc;
+  font-family: "Open Sans";
+}
+
+
+.nodechild{
+  display: none;
+}
+
+#array-popup {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  color: black;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+  
+#array-popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.close {
+  color: #000000;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #787070;
+text-decoration: none;
+cursor: pointer;
+}
+
+.runloop{
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px; /* Rounded corners for the runloop container */
+  padding: 20px; 
+}
+  
+#loop-through button {
+  background-color: #00b300;
+  color: white;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 20px;
+  font-size: large;
+  font-family: "Open Sans";
+}
+
+
+#loop-content button {
+  background-color: #00b300;
+  color: white;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+  font-size: large;
+  font-family: "Open Sans";
+  width: 100%;
+}
+  
+#loop-through button:hover {
+  background-color: #008000;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  font-family: "Open Sans";
+}
+
+#loop-content button:hover {
+  background-color: #008000;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  font-family: "Open Sans";
+}
+  
+#loop-through button:active {
+  color: #008000;
+  background-color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #008000;
+  font-family: "Open Sans";
+}
+
+#loop-content button:active {
+  color: #008000;
+  background-color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #008000;
+  font-family: "Open Sans";
+}
+
+#index-info {
+  width: auto;
+  margin-right: 1em;
+  float: left;
+  display: inline-block;
+}
+
+#index-info-popup {
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+#index-info-popup-content {
+  border-radius: 10px;
+  background-color: #e5d386;
+  margin-left: 20%;
+  position: flex;
+  padding: 10px 18px 10px 18px;
+  border: 1px solid #888;
+  width: 60%;
+  font-family: 'Open Sans';
+  font-size: larger ;
+}
+
+.loop-through {
+  text-align: center; /* Center-align the content inside the loop-through container */
+}
+.nodeValue{
+  color: red;
+  display: inline-block;
+}
+
+
+.input-field {
+  width: 200px; /* Set width for the input field */
+  margin-bottom: 10px; /* Add some spacing below the input field */
+}

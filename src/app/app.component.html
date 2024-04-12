@@ -2,6 +2,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,500;1,200&family=Press+Start+2P&display=swap" rel="stylesheet">
 
 <div class="main-container">
   <div class="nav-container">
@@ -9,6 +10,7 @@
           <li [routerLinkActive]="'active'"><a routerLink="Home">Home</a></li>
           <li [routerLinkActive]="'active'"><a [routerLink]="['Contact']">Contact</a></li>
           <li [routerLinkActive]="'active'"><a routerLink="Courses">Courses</a></li>
+          <!-- <li [routerLinkActive]="'active'"><a routerLink="Career">Career Resources</a></li> -->
           <span style="float:right">
               <li (click) = "login()"><a>Login</a></li>
               <li (click) = "logout()"><a>Logout</a></li>

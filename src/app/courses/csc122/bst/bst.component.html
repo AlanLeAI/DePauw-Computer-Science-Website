@@ -1,0 +1,105 @@
+<h1 class="chapter-header">
+  Binary Search Tree
+</h1>
+
+
+<div class = "bubble-sort-btn">
+    <button class="sort-btn" (click)="showAddNodePanel()">Add node to Tree</button>
+    <button class="new-array-btn" (click)="showRemoveNodePanel()">Remove a node from a tree</button>
+    <button class="stop-array-btn center" id="loop-through-button" (click)="RunLoopPanel()">Search a value</button>
+</div>
+
+<div id="array-popup" *ngIf="showAddNodePanelVisible && onClose === false">
+  <div id="array-popup-content">
+    <span class="close" (click)="close()">&times;</span>
+    <label>Insert a new value into a binary search tree.</label>
+    <br>
+    <input type="number" [(ngModel)]="newNodeValue" placeholder="Enter node value">
+    <button type="submit" id="submit-array" (click)="addNode()">Add</button>
+  </div>
+</div>
+
+<div id="array-popup" *ngIf="showRemoveNodePanelVisible && onClose === false">
+  <div id="array-popup-content">
+    <span class="close" (click)="close()">&times;</span>
+    <label>Remove a node from binary search tree</label>
+    <br>
+    <input type="number" [(ngModel)]="removenode" placeholder="Enter node value">
+    <button type="submit" id="submit-array" (click)="removeNode()">Remove</button>
+  </div>
+</div>
+
+<div class = "runloop">
+  <div id="index-info-popup-content" *ngIf="onLoop === true && onClose === false">
+    <div id="loop-through" class="loop-through">
+      <span class="close" (click)="close()">&times;</span>
+      <label class="search-label">
+        <h1>Search for a node in BST</h1>
+      
+      </label>
+      <br>
+      <input type="number" [(ngModel)]="searchVal" placeholder="Enter node value" class="input-field">
+    </div>
+    
+    <div id="loop-content">
+      <button id="next-button" (click)="onStep()">Step</button><br>
+
+      <div id="index-info"><b>Current Node of a BST: </b>
+        <div class="nodeValue">
+          {{currNode.Value}} 
+          <div *ngIf="getNodeComparison() === 'Less Than'" style="display: inline-block;">Less Than</div>
+          <div *ngIf="getNodeComparison() === 'Greater Than'" style="display: inline-block;">Greater Than</div>
+          <div *ngIf="getNodeComparison() === 'Equal'" style="display: inline-block;">Equal</div>
+          {{searchVal}} - (Searching Value)
+          <div *ngIf="getNodeComparison() === 'Less Than'" style="display: inline-block;"> -> Move to the Right</div>
+          <div *ngIf="getNodeComparison() === 'Greater Than'" style="display: inline-block;"> -> Move to the Left</div>
+        </div>
+      </div>
+
+      <br>
+      <button id="restart-loop" (click)="restartLoop()">Start Loop Again</button>
+    </div>
+
+    <h2 style="text-align: center;">Binary Search Algorithms Visualization</h2>
+    <pre>
+      <code>
+      def search_in_bst(root, value):
+          if root is None or root.value == value:
+              return root
+          if root.value < value:
+              return search_in_bst(root.right_child, value)
+          return search_in_bst(root.left_child, value)
+      
+      # Usage example:
+      # Assuming 'root' is the root node of the binary search tree
+      result = search_in_bst(root, value_to_search)
+      if result:
+          print("Value found in the binary search tree")
+      else:
+          print("Value not found in the binary search tree")
+      </code>
+    </pre>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div *ngIf="returnMessage != ''" [ngStyle]="{'background-color': returnMessage == 'Value found in the binary search tree' ? 'green' : 'red', 'border-radius': '10px', 'padding': '10px', 'border': '2px solid black'}">
+        {{ returnMessage }}
+      </div>
+    </div>
+</div>
+</div>
+
+
+<div class="tree">
+  <ul>
+    <ng-template #recursiveList let-treeNodes>
+        <li *ngFor="let item of treeNodes;">
+            <div class="node" [ngStyle]="{'background-color': (item.Value == currNode?.Value && onLoop == true)? 'yellow': 'white'}">
+                <h2>{{item.Value}}</h2>
+            </div>
+            <ul *ngIf="item.Children.length > 0">
+                <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.Children }"></ng-container>
+            </ul>
+        </li>
+    </ng-template>
+    <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: treeNodes }"></ng-container>
+  </ul>
+</div>

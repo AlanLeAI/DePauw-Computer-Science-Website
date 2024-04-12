@@ -1,61 +1,69 @@
-import { Component,OnInit } from '@angular/core';
-// import { AngularFirestore } from '@angular/fire/firestore';
-// import * as eccrypto from 'eccrypto';
+// import { Component, OnInit } from '@angular/core';
+// import * as crypto from 'crypto';
 
-@Component({
-  selector: 'app-ecc',
-  templateUrl: './ecc.component.html',
-  styleUrls: ['./ecc.component.css']
-})
+// @Component({
+//   selector: 'app-ecc',
+//   templateUrl: './ecc.component.html',
+//   styleUrls: ['./ecc.component.css']
+// })
 
-export class EccComponent{
-  plaintext: string = '';
-  publicKey: string = '';
-  encrypted: string = '';
+// export class EccComponent{
+//   public ec: crypto.ECDH= crypto.createECDH('secp256k1');
+//   const privateKeyBuffer = this.ec.generateKeys();
+//   const privateKeyHexString = privateKeyBuffer.toString('hex');
 
-  // encryptedMessage: string = '';
-  // decryptedMessage: string = '';
+//   this.privateKey = {
+//     type: 'pk',
+//     data: Buffer.from(privateKeyHexString, 'hex'),
+//     // Add the required properties
+//     export: true,
+//     type: 'secp256k1'
+//   };
+  
+//   private publicKey: crypto.KeyObject = this.ec.getPublicKey();
 
-  // private privateKey: Uint8Array;
-  // private publicKey: Uint8Array;
+//   public message: string = '';
+//   public publicKeyText: string = '';
+//   public privateKeyText: string = '';
+//   public encryptedMessage: string = '';
 
-  // constructor() {
-  //   // Generate an ECC key pair
-  //   eccrypto.generatePrivate().then((privateKey) => {
-  //     this.privateKey = privateKey;
-  //     this.publicKey = eccrypto.getPublic(privateKey);
-  //   });
-  // }
+//   constructor() { }
 
-  async encrypt() {
-    // const publicKey = eccrypto.getPublic(Buffer.from(this.publicKey, 'hex'));
-    // const message = Buffer.from(this.plaintext);
-    // const encrypted = await eccrypto.encrypt(publicKey, message);
-    // this.encrypted = encrypted.toString('hex');
+//   ngOnInit(): void {
 
-    // // Convert the message to a buffer
-    // const messageBuffer = Buffer.from(this.message);
+//     this.publicKeyText = this.publicKey.toString('hex');
+//     this.privateKeyText = this.privateKey.toString('hex');
+//   }
 
-    // // Encrypt the message with the recipient's public key
-    // const encrypted = await eccrypto.encrypt(this.publicKey, messageBuffer);
+//   encryptMessage(): void {
+//     if (!this.message) {
+//       return;
+//     }
 
-    // // Convert the encrypted data to a string
-    // this.encryptedMessage = JSON.stringify(encrypted);
-  }
+//     const remotePublicKey = crypto.createECDH('secp256k1');
+//     remotePublicKey.setKey(new crypto.KeyObject({
+//       type: 'pk',
+//       data: Buffer.from(this.message, 'hex')
+//     }));
 
-  async decrypt() {
-    // const privateKey = Buffer.from('private key goes here', 'hex');
-    // const encrypted = Buffer.from(this.encrypted, 'hex');
-    // const decrypted = await eccrypto.decrypt(privateKey, encrypted);
-    // this.plaintext = decrypted.toString();
+//     const sharedSecret = remotePublicKey.computeSecret(this.privateKey);
+//     const cipher = crypto.createCipheriv('aes256', sharedSecret, Buffer.alloc(16, 0));
+//     const encryptedMessage = cipher.update(this.message) + cipher.final();
+//     this.encryptedMessage = encryptedMessage.toString('hex');
+//   }
 
-    // // Parse the encrypted data from a string
-    // const encrypted = JSON.parse(this.encryptedMessage);
+//   decryptMessage(): void {
+//     if (!this.encryptedMessage) {
+//       return;
+//     }
 
-    // // Decrypt the message with the recipient's private key
-    // const decryptedBuffer = await eccrypto.decrypt(this.privateKey, encrypted);
+//     const sharedSecret = this.ec.computeSecret(crypto.createECDH('secp256k1').setKey({
+//       type: 'pk',
+//       data: Buffer.from(this.encryptedMessage, 'hex')
+//     }));
 
-    // // Convert the decrypted buffer to a string
-    // this.decryptedMessage = decryptedBuffer.toString();
-  }
-}
+//     const decipher = crypto.createDecipheriv('aes256', sharedSecret, Buffer.alloc(16, 0));
+//     const decryptedMessage = decipher.update(Buffer.from(this.encryptedMessage, 'hex')) + decipher.final();
+//     this.message = decryptedMessage.toString('utf8');
+//   }
+// }

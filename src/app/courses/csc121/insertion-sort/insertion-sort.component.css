@@ -70,3 +70,73 @@
     border: 2px solid #0066cc;
     font-family: "Open Sans";
   }
+
+
+
+  /* practice code */
+ .practice-code{
+  display: inline-block;
+  width: 100%;
+  background-color: #6998c8;
+}
+
+input[type="text"]{
+width: 50px; /* Adjust the width as needed */
+height: 20px; /* Adjust the height as needed */
+
+}
+pre {
+  background-color: #6998c8;
+  /* padding: 10px; */
+  border-radius: 5px;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+.practice {
+display: flex; /* Use flexbox to align items side by side */
+align-items:center; /* Align items at the top */
+}
+
+/* Style for the code div */
+.code {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Open Sans";
+  color: white;
+}
+#startvalue {
+border: 3px solid rgb(255, 191, 0);
+}
+
+/* Style for the solution div */
+.solution {
+  padding: 10px; 
+  width: fit-content;
+  margin: auto;
+  height: fit-content;
+}
+
+/* Style for correct message */
+.checkRes.correct {
+  border: 2px solid green; /* Add a green border */
+  background-color: green;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Open Sans";
+  padding: 10px; /* Add padding for spacing */
+}
+
+/* Style for incorrect message */
+.checkRes.incorrect {
+  border: 2px solid red; /* Add a red border */
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Open Sans";
+  padding: 10px; /* Add padding for spacing */
+}

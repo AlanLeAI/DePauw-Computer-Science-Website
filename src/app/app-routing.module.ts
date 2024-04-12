@@ -11,12 +11,14 @@ import { Csc240Component } from './courses/csc240/csc240.component';
 import { Csc340Component } from './courses/csc340/csc340.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
+import { CareerComponent } from './career/career.component';
 
 const appRoute: Routes =[
   {path: '',redirectTo: 'Home', pathMatch: 'full'},
   {path: 'Home',component: HomeComponent},
   {path: 'Contact',component: ContactComponent},
   {path: 'Courses',component: CoursesComponent},
+  {path: 'Career', component: CareerComponent},
   {path:'Courses',children:[
     {path:'Course/101' ,component:  Csc121Component},
     {path: 'Course/102', component: Csc122Component},

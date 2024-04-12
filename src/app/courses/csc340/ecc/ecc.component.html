@@ -1,17 +1,46 @@
-<img src="./assets/images/ECC.gif" alt="">
+<!-- <div class="container">
+  <h1>Elliptic Curve Cryptography</h1>
 
-
-<div>
-    <label for="plaintext">Plaintext:</label>
-    <textarea id="plaintext" [(ngModel)]="plaintext"></textarea>
+  <div class="form-group">
+    <label for="message">Message:</label>
+    <input type="text" class="form-control" id="message" [(ngModel)]="message" placeholder="Enter your message">
   </div>
-  <div>
+
+  <div class="form-group">
     <label for="publicKey">Public Key:</label>
-    <textarea id="publicKey" [(ngModel)]="publicKey"></textarea>
+    <textarea class="form-control" id="publicKey" rows="3" readonly>{{ publicKeyText }}</textarea>
+
+  
+</div>
+
+
+  
+<div
+ 
+class="form-group">
+
+    
+<label
+ 
+for="privateKey">Private Key:</label>
+
+    
+<textarea
+ 
+class="form-control"
+ 
+id="privateKey"
+ 
+rows="3" readonly>{{ privateKeyText }}</textarea>
   </div>
-  <div>
-    <label for="encrypted">Encrypted:</label>
-    <textarea id="encrypted">{{encrypted}}</textarea>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary" (click)="encryptMessage()">Encrypt</button>
+    <button type="button" class="btn btn-secondary" (click)="decryptMessage()">Decrypt</button>
   </div>
-  <button (click)="encrypt()">Encrypt</button>
-  <button (click)="decrypt()">Decrypt</button>
+
+  <div class="form-group">
+    <label for="encryptedMessage">Encrypted Message:</label>
+    <textarea class="form-control" id="encryptedMessage" rows="3" readonly>{{ encryptedMessage }}</textarea>
+  </div>
+</div> -->

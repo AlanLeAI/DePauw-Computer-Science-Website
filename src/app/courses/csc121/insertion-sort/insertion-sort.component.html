@@ -11,6 +11,7 @@
         <button class="sort-btn" (click)="insertionSort()">Insertion Sort</button>
         <button class="new-array-btn" (click)="generateArray()">Generate New Array</button>
         <button class="stop-array-btn" (click)="stopSort()">Stop</button>
+        <button class="stop-array-btn" (click)="practiceCode()">Practice Code</button>
     </div>
     
     <div class="container">
@@ -19,4 +20,48 @@
         </div>
     </div>
 </div>
+
+
+
+<div class="practice-code" *ngIf="clickpractice">
+    <pre>
+    <div class="practice">
+        <div class="code">
+            <code>
+Filling in the missing places to complete the Selection Sort Algorithm
+<br>
+
+
+int n = arr.length;
+        
+for (int i = 1; i < n; i++) {{'{'}}
+    int key = arr[i];
+    int j = i - 1;
+    
+    // Move elements of arr[0..i-1] that are greater than key
+    // to one position ahead of their current position
+    while (j >= 0 && arr[<input type="text" id="startvalue" [(ngModel)]="input1" (ngModelChange)="checkInput()"/>] > key) {{'{'}}
+        arr[<input type="text" id="startvalue" [(ngModel)]="input2" (ngModelChange)="checkInput()"/>] = arr[<input type="text" id="startvalue" [(ngModel)]="input3" (ngModelChange)="checkInput()"/>];
+        j--;
+    {{'}'}}
+    
+    arr[<input type="text" id="startvalue" [(ngModel)]="input4" (ngModelChange)="checkInput()"/>] = key;
+{{'}'}}
+
+        </code>
+        </div>
+
+        <div class="solution" *ngIf="input1 && input2 && input3 && input4">
+            <div class="checkRes incorrect" *ngIf="!checkres"> 
+                <p>You Make A Mistake!</p>
+            </div>
+            <div class="checkRes correct" *ngIf="checkres"> 
+                <p>You Are Correct!</p>
+            </div>
+        </div>
+    </div>
+    </pre>
+</div>
+
+
 

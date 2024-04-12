@@ -1,0 +1,189 @@
+.stack-container {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    flex-direction: column-reverse;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.stack-element {
+    background-color: white;
+    border: 4px solid green;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    margin: 2px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: x-large;
+    font-weight:900;
+}
+
+
+button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.chapter-header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: coral;
+    font-weight: 600;
+  }
+
+
+  .stack-size-description {
+    margin-bottom: 10px; /* Adjust spacing as needed */
+    text-align: center;
+  }
+  
+
+  .stackdes{
+    display: block;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-line {
+    border-bottom: 4px solid rgb(255, 255, 255);
+    width: 200px; /* Match width of stack elements */
+    margin: auto;
+    margin-bottom: 2%;
+  }
+
+
+  .bubble-sort-btn{
+    display: flex; /* Use flexbox layout */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: center; /* Center the buttons horizontally */
+    width: 100%;
+  }
+  
+  .bubble-sort-btn button {
+    background-color: #d0b640;
+    color: white;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
+    border: none;
+    margin: 10px;
+    font-family: "Open Sans";
+  }
+  
+  .bubble-sort-btn button:hover {
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    font-family: "Open Sans";
+  }
+  
+  .bubble-sort-btn button:active {
+    color: #0066cc;
+    background-color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    /* border: none; */
+    outline: none;
+    border: 2px solid #0066cc;
+    font-family: "Open Sans";
+  }
+  #array-popup {
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    color: black;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+    
+  #array-popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+  }
+  
+  .close {
+    color: #000000;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+  color: #787070;
+  text-decoration: none;
+  cursor: pointer;
+  }
+
+
+
+
+  h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  p {
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+  
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 1em;
+  }
+  
+  li {
+    margin-bottom: 0.5em;
+  }
+  
+  h3 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+
+  table {
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: collapse; /* Remove space between cells */
+    width: fit-content; /* Adjust width as needed */
+  }
+  
+  th, td {
+    border-bottom: 1px solid #ddd;; /* Orange border for all cells */
+    padding: 5px 10px; /* Padding for spacing */
+    text-align: left; /* Left-align text (optional) */
+    color: white; /* White text color */
+  }
+  
+  th {
+    background-color: orange; /* Orange background for headers (optional) */
+  }
+  
+
+  tr:hover {
+      background-color: lightgreen;
+  }

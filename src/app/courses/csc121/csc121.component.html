@@ -1,278 +1,39 @@
-<h1 class="chapter-header">
-    Data Type in Computer Science
-</h1>
-<p class="dataDescription">
-    In computer science and computer programming, a data type (or simply type) is a collection or grouping of data values, usually specified by a set of possible values, a set of allowed operations on these values, and/or a representation of these values as machine types.
-    A data type specification in a program constrains the possible values that an expression, such as a variable or a function call, might take. On literal data, it tells the compiler or interpreter how the programmer intends to use the data.
-</p>
 
-
-<div class="table">
-    <div class="row">
-      <div class="header"><b>Data Type</b></div>
-      <div class="header"><b>Description</b></div>
-      <div class="header"><b>Storage Capacity</b></div>
-      <div class="header"><b>Example</b></div>
-    </div>
-    <div class="row">
-      <div class="cell">Integer (int)</div>
-      <div class="cell">Stores whole numbers that are Natural numbers. Using 4 bytes or 32 bits to store an Integer</div>
-      <div class="cell">Ranging from -2,147,483,647 to 2,147,483,647</div>
-      <div class="cell">13  21  36</div>
-    </div>
-    <div class="row">
-      <div class="cell">Integer (long)</div>
-      <div class="cell">Represent integers, or whole numbers. It is similar to the int data type, but it is typically larger in size using 64 bits and can store a wider range of values.</div>
-      <div class="cell">Ranging from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</div>
-      <div class="cell">223372036854775808</div>
-    </div>
-
-    <div class="row">
-        <div class="cell">Floating Points (float)</div>
-        <div class="cell">Represent floating-point numbers, or numbers with decimal places. It is a primitive data type that can store positive or negative real numbers, including numbers with decimal places.</div>
-        <div class="cell">Implemented as a double-precision floating-point number, with a precision of 15-17 decimal places.</div>
-        <div class="cell">2.3  3.4  1.7</div>
-    </div>
-
-    <div class="row">
-        <div class="cell">Floating Points (double)</div>
-        <div class="cell">Similar to the float data type, but it is typically larger in size and provides a higher precision for storing floating-point numbers. 
-            The size of a double data type varies depending on the programming language and system, but it typically ranges from 64 to 128 bits.</div>
-        <div class="cell">Implemented as a double-precision floating-point number, with a precision of 30-35 decimal places.</div>
-        <div class="cell">2.132412343247</div>
-    </div>
-
-    <div class="row">
-        <div class="cell">String (string)</div>
-        <div class="cell"> Represent sequences of characters, such as words, sentences, or entire texts. 
-            It is a non-primitive data type that is typically implemented as an object in most modern programming languages, including Java, Python, and C#.</div>
-        <div class="cell">Maximum of 2147483647 characters</div>
-        <div class="cell">"Hello World!"</div>
-    </div>
-  </div>
-<div class="cond-operator">
-<h1 class="chapter-header">
-  Condition Operator and Mathematical Operator
-</h1>
-
-<p class="class-obj-text">Condition operators are symbols used in programming languages to evaluate a condition and determine the flow of execution of a program. 
-  Mathematical operators are symbols used in programming languages to perform arithmetic operations.
-  <br>
-  In Java, some commonly used condition operators are:</p>
-<li class="class-obj-text">"==": check if two variables are equal</li>
-<li class="class-obj-text">"!=": check if two variables are different</li>
-<li class="class-obj-text">">": check if the left variable is greater than the right variable</li>
-<li class="class-obj-text">"<": check if the left variable is smaller than the right variable</li>
-<li class="class-obj-text">">=": check if the left variable is greater than or equal the right variable</li>
-<li class="class-obj-text">"<=": check if the left variable is smaller than or equal the right variable</li>
-
-
-<p class="class-obj-text">Some commonly used Mathematical Operators are:</p>
-<br>
-<li class="class-obj-text">"+": Addition</li>
-<li class="class-obj-text">"-": Subtraction</li>
-<li class="class-obj-text">"*": Multiplication</li>
-<li class="class-obj-text">"/": Division</li>
-<li class="class-obj-text">"%": Modulo</li>
-</div>
-<div class="class-object">
-<h1 class="chapter-header">
-  Classes And Objects
-</h1>
-<p class="class-obj-text">In Java, a class is a blueprint for creating objects. It defines the properties and methods that objects created from the class will have.
-   Classes are the building blocks of Java applications and are used to model real-world entities.</p>
-
-<br>
-<p class="class-obj-text">Here is a simple example of a class in Java:</p>
-<pre>
-  <code class="java">
-  public class Car {{ '{' }}
-     private String make;
-     private String model;
-     private int year;
-  
-     public void setMake(String make) {{ '{' }}
-        this.make = make;
-     {{ '}' }}
-  
-     public String getMake(){{ '{' }}
-        return make;
-     {{ '}' }}
-  
-     public void setModel(String model) {{ '{' }}
-        this.model = model;
-     {{ '}' }}
-  
-     public String getModel() {{ '{' }}
-        return model;
-     {{ '}' }}
-  
-     public void setYear(int year) {{ '{' }}
-        this.year = year;
-     {{ '}' }}
-  
-     public int getYear() {{ '{' }}
-        return year;
-     {{ '}' }}
-  {{ '}' }}
-  </code>
-</pre>
-
-  <p class="class-obj-text">
-    An object is an instance of a class and has its own state and behavior. 
-    The state of an object is represented by its instance variables and the behavior is represented by its methods. 
-    To create an object in Java, you need to use the "new" operator followed by a call to a constructor of the class.
-  </p>
-
-  <pre>
-    <code>
-      Car myCar = new Car();
-      myCar.brand = "Toyota";
-      myCar.model = "Camry";
-      myCar.year = 2020;
-      myCar.startEngine();
-      myCar.stopEngine();
-
-    </code>
-  </pre>
-</div>
-
-<div class="array-vis">
-  <h1 class="chapter-header">
-    One Dimensional Array
-  </h1>
-  
-	
-	<div class="array-table center">
-        <div class="array-length">Array Length: {{arrayLength}}</div>
-        <div class="array-display">
-          <div class="array-element" *ngFor="let ele of arrayelement; let i = index">
-            <div [ngStyle]="{'background-color': (currentNum === ele && currentIndex === i)? '#F5F5DC': 'white'}">
-              {{ele}}
-            </div>
-          </div>
-        </div>
-  </div>
-
-  <div id="array-table-buttons" class = "decorTable">
-    <button id="array-popup-button" (click)="createArray()">Create New Array</button>
-    <button id="push-popup-button" (click)="addNewValue()">Add New Value (Push)</button>
-    <button id="pop-popup-button" (click)="popLastValue()">Remove a Value (Pop)</button>
-    <button id="modify-popup-button" (click)="modifyValue()">Modify a Value</button>
-
-  </div>
-
-  <div id="array-popup" *ngIf="onCreateArray === true && onClose === false">
-    <div id="array-popup-content">
-      <span class="close" (click)="close()">&times;</span>
-
-      <label>Enter new values for the array separated by spaces</label>
-      <input id="input-new-array" placeholder="1,2,3,4,5" [(ngModel)]="readInput"/>
-      <br /><br>
-      <button type="submit" id="submit-array" (click)="submitNewArray()">Submit Array</button>
-    </div>
-  </div>
-
-  <div id="push-popup" *ngIf="onPush === true && onClose === false">
-    <div id="push-popup-content">
-      <span class="close" (click)="close()">&times;</span>
-      <label>array.push() adds a value to the end of an array. For example, <b>array.push(5)</b> will add a 5 to
-        the end of this array.<br> Try it below!<br></label>
-      <br />
-      <p>Enter New Value (Exp. 3)</p>
-      <input id="add-val" placeholder="1" [(ngModel)]="readInput"/>
-      <br /><br>
-      <button type="submit" id="submit-push" (click)="submitPush()">Add Value</button>
-    </div>
-  </div>
-
-
-  <div id="pop-popup" *ngIf="onPop === true && onClose === false">
-    <div id="pop-popup-content">
-      <span class="close" (click)="close()">&times;</span>
-      <label> Pop removes and returns the last element in the array. </label>
-      <p>Here pop has removed the value: </p>
-      <p id="display-pop"></p>
-    </div>
-  </div>
-
-  
-  <!-- Minh Thie Code -->
-  <div id="modify-popup" *ngIf="onModify === true && onClose === false">
-    <div id="modify-popup-content">
-      <span class="close" (click)="close()">&times;</span>
-      <label>Enter the index of the element to be modified</label>
-      <input id="modify-index" placeholder="0" [(ngModel)]="needmodify"/>
-      <br><br>
-      <label>Enter the new value (Exp. 3)</label>
-      <input id="modify-val" placeholder="0" [(ngModel)]="readInput"/>
-      <br><br>
-      <button type="submit" id="submit-modify" (click)="onSubmitModify()">Modify Value</button>
-    </div>
-  </div>
-  <!-- Minh Thie Code -->
-  <br>
-
-  <div class = "runloop">
-    <div id="loop-through">
-      <button id="loop-through-button" class="center" (click)="RunLoopPanel()">run  Loop</button>
-      <br>
-    </div>
-
-    <div id="index-info-popup-content" *ngIf="onLoop === true && onClose === false">
-      
-
-      <span class="close" (click)="close()">&times;</span>
-
-      <div id="loop-content">
-        <button id="next-button" (click)="onStep()">Step</button><br>
-
-        <div id="index-info"><b>Current Index Of An Element: </b>{{currentIndex}}</div>
-        <br>
-        <div id="curr-num-info"><b>Current Element In The Array: </b>{{currentNum}}</div>
-        <div id="next-num-info"><b>Next Element In The Array: </b>{{nextNum}}</div>
-        <div id="curr-sum-info"><b>Current Sum: </b>{{currSum}}</div>
-
-        <br>
-        <button id="restart-loop" (click)="restartLoop()">Start Loop Again</button>
-      </div>
-
-      <h2 style="text-align: center;">Indexing Information</h2>
-      <div>
-        <p> 
-          In an array, an index starts at 0 and counts up from there. <br>
-          Say that you declare an array called arr with values 2, 4, 6, 8 <br>
-          Declaring that array looks like: <b>arr[] = [2, 4, 6, 8]
-
-          </b><br><br>
-
-          The value 2 is at index 0, the value 4 is at index 1, and so on. <br><br>
-
-          Typically, programmers use the letter 'i' to show the index in a loop. <br><br>
-        </p>
-
-        <span id="for-loop">Example: <b>for (int i=0, i < arr.length, i++)</b></span>
-        <br>
-        <br>
-        <li><b>int i=0</b> initializes the variable i</li> 
-        <br>
-        <li><b>i < arr.length</b> is the condition. Here the loop will run as long as the index is less than the length of the array. We use < instead of <= 
-          because the last index in the array will always be <i>one less than the ength of the array</i> since indexing starts at zero.<br></li>
-        <li><b>i++</b> increments the index after everything inside the loop has executed.<br><br></li>
-
-        Finding <b>i</b> retrieves the index.<br>
-        Finding <b>arr[i]</b> retrieves the value associate with that index.<br>
-        For example, using the array from above, if i = 2, arr[i] equals 6.<br>
-        
-      </div>
-  </div>
-</div>
-</div>
-
-
-
+<!-- <app-datatype></app-datatype>
+<app-operators></app-operators>
+<app-classobject></app-classobject>
+<app-array1d></app-array1d>
 <app-bubble-sort></app-bubble-sort>
 <app-insertion-sort></app-insertion-sort>
 <app-selection-sort></app-selection-sort>
+<app-practice></app-practice> -->
 
-<app-forloop></app-forloop>
+
+
+<div class="container">
+    <div class="button-row">
+      <button class="header" (click)="showContent('datatype')">Data Types</button>
+      <button class="header" (click)="showContent('operators')">Operators</button>
+      <button class="header" (click)="showContent('classobject')">Class & Object</button>
+      <button class="header" (click)="showContent('selection-sort')">Selection Sort</button>
+    </div>
+  
+    <div class="button-row">
+      <button class="header" (click)="showContent('array1d')">Array 1D</button>
+      <button class="header" (click)="showContent('bubble-sort')">Bubble Sort</button>
+      <button class="header" (click)="showContent('insertion-sort')">Insertion Sort</button>
+      <button class="header" (click)="showContent('practice')">Practice</button>
+    </div>
+  
+  
+    <app-datatype *ngIf="selectedContent === 'datatype'"></app-datatype>
+    <app-operators *ngIf="selectedContent === 'operators'"></app-operators>
+    <app-classobject *ngIf="selectedContent === 'classobject'"></app-classobject>
+    <app-array1d *ngIf="selectedContent === 'array1d'"></app-array1d>
+    <app-bubble-sort *ngIf="selectedContent === 'bubble-sort'"></app-bubble-sort>
+    <app-insertion-sort *ngIf="selectedContent === 'insertion-sort'"></app-insertion-sort>
+    <app-selection-sort *ngIf="selectedContent === 'selection-sort'"></app-selection-sort>
+    <app-practice *ngIf="selectedContent === 'practice'"></app-practice>
+</div>
+
+

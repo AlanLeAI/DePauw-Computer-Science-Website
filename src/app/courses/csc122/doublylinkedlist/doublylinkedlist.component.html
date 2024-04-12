@@ -1,0 +1,161 @@
+<h1 class="chapter-header">
+    Doubly-Linked Lists
+</h1>
+
+<div class="table-container">
+    <div class="definition">
+      <p>A doubly linked list is a data structure consisting of a collection of nodes. Each node contains three fields: data, a pointer to the previous node, and a pointer to the next node.</p>
+      <p>Unlike a singly linked list, each node in a doubly linked list maintains a reference to both the next and previous nodes, allowing traversal in both directions.</p>
+    </div>
+    <h2>Operations and Runtime Complexity</h2>
+    <table>
+      <tr>
+        <th>Operation</th>
+        <th>Average Case</th>
+        <th>Worst Case</th>
+      </tr>
+      <tr>
+        <td>Insertion (beginning)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+      </tr>
+      <tr>
+        <td>Insertion (end)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+      </tr>
+      <tr>
+        <td>Insertion (middle)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+      </tr>
+      <tr>
+        <td>Deletion (beginning)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+      </tr>
+      <tr>
+        <td>Deletion (end)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+      </tr>
+      <tr>
+        <td>Deletion (middle)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+      </tr>
+      <tr>
+        <td>Search</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div id="array-table-buttons">
+    <button id="array-popup-button" (click)="insertNode()"><b>Insert a node</b></button><br>
+    <!-- <button id="modify"><b>Insert a node</b></button> -->
+    <button id="access" (click)="deleteNode()"><b>Delete a node</b></button>
+  </div>
+
+
+<div class="queue-size">Size of the Queue: <span style="color: orange; font-weight: bold; font-size: 2rem;">{{ items.length }}</span> </div>
+
+<div class="container">
+    <div class="node" *ngFor="let item of items; let i = index">
+        
+
+        <div class="node-content">
+            <div [ngStyle]="{'background-color': (i === this.currIndex) ? '#F5F5DC':'white'}">
+                <div class="arrow-line-prev-for" *ngIf="i === 0"></div>
+                <div class="arrow-right-prev-for" *ngIf="i === 0"></div>
+                <div class="arrow-line-forward-for" *ngIf="i === 0"></div>
+                <div class="arrow-right-forward-for" *ngIf="i === 0"></div>
+                <p>{{ item }}</p>
+            </div>
+        </div>
+        <div class="arrow-line-prev"></div>
+        <div class="arrow-right-prev"></div>
+        <div class="arrow-line-forward"></div>
+        <div class="arrow-right-forward"></div>
+    </div>
+</div>
+
+
+<div id="array-popup" *ngIf="onClose === false && onInsert === true">
+    <div id="array-popup-content">
+      <span class="close" (click)="close()">&times;</span>
+      <label>Value of node to insert:</label>
+      <input id="input-new-array" placeholder="0" [(ngModel)] = "nodeValue"/>
+      <br><br>
+      <label>Index of node to insert:</label>
+      <input id="input-new-array" placeholder="0" [(ngModel)] = "nodeIndex"/>
+      <br><br>
+      <div id="loop-content">
+        <button id="next-button" (click)="nextNode()">Step</button><br>
+      </div>
+      <div class="insert-content">
+       <pre>
+        <code>
+            public void insertAtIndex(int data, int index) {{ '{' }}
+
+                Node newNode = new Node(data);
+                if (index < 0)
+                    throw new IndexOutOfBoundsException("Index cannot be negative");
+                
+                if (index == 0) {{ '{' }}
+                    newNode.next = head;
+                    if (head != null) {{ '{' }}
+                        head.prev = newNode;
+                    {{ '}' }}
+                    head = newNode;
+                    return;
+                {{ '}' }}
+        
+                Node current = head;
+                int currentIndex = 0;
+        
+                while (current != null && currentIndex < index - 1) {{ '{' }}
+                    current = current.next;
+                    currentIndex++;
+                {{ '}' }}
+        
+                if (current == null) {{ '{' }}
+                    throw new IndexOutOfBoundsException("Index out of bounds");
+                {{ '}' }}
+        
+                newNode.next = current.next;
+                newNode.prev = current;
+
+                if (current.next != null) {{ '{' }}
+                    current.next.prev = newNode;
+                {{ '}' }}
+
+                current.next = newNode;
+            {{ '}' }}
+        </code>
+       </pre>
+      </div>
+    </div>
+</div>
+
+
+<div id="array-popup" *ngIf="onClose === false && onDelete === true">
+    <div id="array-popup-content">
+      <span class="close" (click)="close()">&times;</span>
+
+      <label>Enter a index of node you want to delete:</label>
+      <input id="input-new-array" placeholder="2" [(ngModel)]="nodeIndexDelete"/>
+      <br><br>
+      <div id="loop-content">
+        <button id="next-button" (click)="nextDelete()">Step</button><br>
+      </div>
+
+
+      <div class="delete-content">
+       
+      </div>
+    </div>
+</div>
+

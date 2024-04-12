@@ -1,0 +1,44 @@
+.table {
+    display: flex;
+    flex-direction:column;
+    margin: auto;
+    border-collapse: collapse;
+    width: fit-content;
+    border: 1px solid black;
+}
+
+.chapter-header{
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 60px ;
+    align-items: center;
+    margin: auto;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+  
+.cell {
+    display: flex;
+    justify-content:left;
+    /* align-items:center; */
+    /* text-align: justify; */
+    width: 200px;
+    padding: 5px;
+    border: 1px solid black;
+}
+  
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 5px;
+    color: orange;
+    border: 1px solid black;
+}

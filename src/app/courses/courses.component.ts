@@ -9,6 +9,7 @@ import { CoursesService } from '../Services/courses.service';
 })
 export class CoursesComponent implements OnInit {
 
+
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) { }
 
   courses: { id: number; name: string; author: string; credit: number; code: string; image: string; description: string; }[] = [];
@@ -20,6 +21,10 @@ export class CoursesComponent implements OnInit {
     })
     // this.courses = this.route.snapshot.data['courses'];
 
+
   }
 
+
 }
+
+

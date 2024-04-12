@@ -1,0 +1,22 @@
+<h1 class="chapter-header">
+    Public Key Encryption
+</h1>
+<div class="gif-image">
+    <img src="./assets/images/publickey.gif" alt="Public Key">
+</div>
+<div class="gif-image2">
+    <img src="./assets/images/publickey3.gif" alt="Public Key" width="1000px" height="500px">
+</div>
+
+
+<div id="array-table-buttons" class = "decorTable">
+    <button id="array-popup-button" (click)="openrsa()">Rivest-Shamir-Adleman (RSA)</button>
+    <button id="push-popup-button">Elliptic Curve Cryptography (ECC)</button>
+    <button id="pop-popup-button" >Digital Signature Algorithm (DSA)</button>
+    <button id="modify-popup-button">Diffie-Hellman key exchange (DHE)</button>
+</div>
+
+
+<div class="rsa" *ngIf="rsa">
+    <app-rsa></app-rsa>
+</div>

@@ -31,6 +31,12 @@ interface Item {
 export class InsertionSortComponent {
   items: Item[]= [];
   width = 0.5
+  input1 = "" 
+  input2 = ""
+  input3 = ""
+  input4 = ""
+  checkres = false
+  clickpractice = false
 
   ngOnInit() {
     this.generateArray()
@@ -73,5 +79,20 @@ export class InsertionSortComponent {
   
   stopSort(){
     this.stopSor = true
+  }
+
+  checkInput(){
+    if( this.input1 == "j" || this.input1 == " j " ||  this.input1 == " j"){
+      if((this.input2 == "j+1" || this.input2 == " j + 1 " || this.input2 == " j+1") && this.input3 == this.input1 && this.input4 == this.input2){
+        this.checkres = true
+      }
+    }
+    else{
+      this.checkres = false
+    }
+  }
+
+  practiceCode(){
+    this.clickpractice = !this.clickpractice
   }
 }

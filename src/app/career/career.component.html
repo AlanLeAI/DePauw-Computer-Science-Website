@@ -1,0 +1,12 @@
+<div class="career-websites">
+    <h1>Career Websites</h1>
+  
+    <ul>
+      <li *ngFor="let careerPage of careerPages">
+        <a href="{{careerPage.link}}">
+          <img src="{{careerPage.imageUrl}}" alt="{{careerPage.title}}">
+          {{careerPage.title}}
+        </a>
+      </li>
+    </ul>
+  </div>

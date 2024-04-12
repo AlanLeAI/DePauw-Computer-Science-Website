@@ -1,0 +1,61 @@
+<div class="class-object">
+    <h1 class="chapter-header">
+      Classes And Objects
+    </h1>
+    <p class="class-obj-text">In Java, a class is a blueprint for creating objects. It defines the properties and methods that objects created from the class will have.
+       Classes are the building blocks of Java applications and are used to model real-world entities.</p>
+    
+    <br>
+    <p class="class-obj-text">Here is a simple example of a class in Java:</p>
+    <pre>
+      <code class="java">
+      public class Car {{ '{' }}
+         private String make;
+         private String model;
+         private int year;
+      
+         public void setMake(String make) {{ '{' }}
+            this.make = make;
+         {{ '}' }}
+      
+         public String getMake(){{ '{' }}
+            return make;
+         {{ '}' }}
+      
+         public void setModel(String model) {{ '{' }}
+            this.model = model;
+         {{ '}' }}
+      
+         public String getModel() {{ '{' }}
+            return model;
+         {{ '}' }}
+      
+         public void setYear(int year) {{ '{' }}
+            this.year = year;
+         {{ '}' }}
+      
+         public int getYear() {{ '{' }}
+            return year;
+         {{ '}' }}
+      {{ '}' }}
+      </code>
+    </pre>
+    
+      <p class="class-obj-text">
+        An object is an instance of a class and has its own state and behavior. 
+        The state of an object is represented by its instance variables and the behavior is represented by its methods. 
+        To create an object in Java, you need to use the "new" operator followed by a call to a constructor of the class.
+      </p>
+    
+      <pre>
+        <code>
+          Car myCar = new Car();
+          myCar.brand = "Toyota";
+          myCar.model = "Camry";
+          myCar.year = 2020;
+          myCar.startEngine();
+          myCar.stopEngine();
+    
+        </code>
+      </pre>
+    </div>

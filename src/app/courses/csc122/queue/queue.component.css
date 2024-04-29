@@ -154,3 +154,8 @@ th {
 tr:hover {
     background-color: lightgreen;
 }
+
+.nodeindex{
+  display: block;
+  padding-top: 20px;
+}

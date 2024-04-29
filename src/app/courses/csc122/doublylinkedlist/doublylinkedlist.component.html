@@ -63,15 +63,13 @@
 <div class="queue-size">Size of the Queue: <span style="color: orange; font-weight: bold; font-size: 2rem;">{{ items.length }}</span> </div>
 
 <div class="container">
-    <div class="node" *ngFor="let item of items; let i = index">
-        
-
-        <div class="node-content">
-            <div [ngStyle]="{'background-color': (i === this.currIndex) ? '#F5F5DC':'white'}">
-                <div class="arrow-line-prev-for" *ngIf="i === 0"></div>
-                <div class="arrow-right-prev-for" *ngIf="i === 0"></div>
-                <div class="arrow-line-forward-for" *ngIf="i === 0"></div>
-                <div class="arrow-right-forward-for" *ngIf="i === 0"></div>
+    <div class="node" *ngFor="let item of items; let i = index">     
+      <div class="arrow-line-prev-for" *ngIf="i === 0"></div>
+      <div class="arrow-right-prev-for" *ngIf="i === 0"></div>
+      <div class="arrow-line-forward-for" *ngIf="i === 0"></div>
+      <div class="arrow-right-forward-for" *ngIf="i === 0"></div>
+        <div class="node-content" [ngStyle]="{'background-color': (i === this.currIndex) ? '#e5d386':'white'}">
+            <div>
                 <p>{{ item }}</p>
             </div>
         </div>
@@ -79,6 +77,7 @@
         <div class="arrow-right-prev"></div>
         <div class="arrow-line-forward"></div>
         <div class="arrow-right-forward"></div>
+        <div class="nodeindex">index: {{i}}</div>
     </div>
 </div>
 
@@ -115,16 +114,18 @@
         
                 Node current = head;
                 int currentIndex = 0;
-        
+                <span class="codeexplain" style="color: red">// Finding the index to insert the new node.</span> 
                 while (current != null && currentIndex < index - 1) {{ '{' }}
-                    current = current.next;
+                    current = current.next;  <span class="codeexplain" style="color: red">// Current Index is at {{currIndex}}</span> 
+                    <span class="codeexplain" style="color:red;">// Current Value equals to {{items[currIndex]}} </span>
+                    <span class="codeexplain" style="color:red;" *ngIf="currIndex == nodeIndex-1"> You have found the index to insert.</span>
                     currentIndex++;
                 {{ '}' }}
-        
+                <span class="codeexplain" style="color: red">// Check if we are at the end of the list.</span> 
                 if (current == null) {{ '{' }}
                     throw new IndexOutOfBoundsException("Index out of bounds");
                 {{ '}' }}
-        
+                <span class="codeexplain" style="color: red">// Add the node value at the current index.</span>
                 newNode.next = current.next;
                 newNode.prev = current;
 
@@ -151,10 +152,44 @@
       <div id="loop-content">
         <button id="next-button" (click)="nextDelete()">Step</button><br>
       </div>
-
-
       <div class="delete-content">
-       
+        <pre>
+          <code>
+            public void deleteNode(int key) {{ '{' }}
+              Node current = head;
+      
+              <span class="codeexplain" style="color: red;">// Traverse the list to find the node to be deleted</span>
+              <span class="codeexplain" style="color: red;">// Current Index is at {{currIndex}}</span>
+              <span class="codeexplain" style="color: red;" *ngIf="currIndex.toString() === nodeIndexDelete">//You have found the index to delete.</span>
+              while (current != null) {{ '{' }}
+                  if (current.data == key) {{ '{' }}
+                      <span class="codeexplain" style="color: red;">// If the node to be deleted is the head node</span>
+                      if (current == head) {{ '{' }}
+                          head = head.next;
+                          if (head != null)
+                              head.prev = null;
+                      {{ '}' }}
+                      <span class="codeexplain" style="color: red;">// If the node to be deleted is the tail node</span>
+                      else if (current == tail) {{ '{' }}
+                          tail = tail.prev;
+                          if (tail != null)
+                              tail.next = null;
+                      {{ '}' }}
+                      <span class="codeexplain" style="color: red;">// If the node to be deleted is neither head nor tail</span>
+                      else {{ '{' }}
+                          current.prev.next = current.next;
+                          current.next.prev = current.prev;
+                      {{ '}' }}
+                      return;<span class="codeexplain" style="color: red;">// Exit the method after deleting the node</span>
+                  {{ '}' }}
+                  current = current.next;
+              {{ '}' }}
+      
+              <span class="codeexplain" style="color: red;">// If the key is not found in the list</span>
+              System.out.println("Node with key " + key + " not found in the list.");
+            {{ '}' }}
+          </code>
+        </pre>
       </div>
     </div>
 </div>

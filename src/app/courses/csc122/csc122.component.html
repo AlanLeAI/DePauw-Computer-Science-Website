@@ -11,6 +11,7 @@
   <div class="button-row">
     <button class="header" (click)="showContent('queue')">Queue</button>
     <button class="header" (click)="showContent('doublylinkedlist')">Doubly-Linked List</button>
+    <button class="header" (click)="showContent('dfsbfs')">DFS/BFS</button>
   </div>
 
   <div *ngIf="selectedContent === 'arr2d'">
@@ -35,6 +36,11 @@
   <div *ngIf="selectedContent === 'doublylinkedlist'">
     <app-doublylinkedlist></app-doublylinkedlist>
   </div>
+
+  <div *ngIf="selectedContent === 'dfsbfs'">
+    <app-dfsbfs></app-dfsbfs>
+  </div>
+
 
 </div>
 

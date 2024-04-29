@@ -47,6 +47,7 @@ export class DoublylinkedlistComponent {
   addHead = false
   insertNode(){
     this.onClose = false
+    this.onDelete = false
     this.onInsert = true
     this.currIndex = 0
     this.currValue = this.items[this.nodeIndex]
@@ -61,7 +62,8 @@ export class DoublylinkedlistComponent {
     }
     if(this.position == this.nodeIndex - 1 && this.doneStop == false){
       this.items.splice(this.nodeIndex,0,this.nodeValue)
-      this.doneStop =true
+      this.currIndex = 0
+      this.position = 0
     }
     else if(this.position < this.nodeIndex - 1 && this.doneStop == false){
       this.currIndex += 1
@@ -75,17 +77,26 @@ export class DoublylinkedlistComponent {
   deleteNode(){
     this.onClose = false
     this.onDelete = true
+    this.onInsert = false
     this.currIndex = 0
     this.currValue = this.items[this.nodeIndexDelete]
   }
 
   nextDelete(){
-    if(this.currIndex !== this.nodeIndexDelete){
+    console.log(this.currIndex, this.nodeIndexDelete)
+    if(this.currIndex.toString() !== this.nodeIndexDelete){
       this.currIndex += 1
     }
     else{
       console.log("trigger")
-      this.items = this.items.splice(this.nodeIndex, 1);
+      var newitems = []
+      for (var i=0;i<this.items.length;i++){
+        if(i != this.currIndex){
+          newitems.push(this.items[i])
+        }
+      }
+      this.items = newitems
+      this.currIndex = 0
     }
     
   }

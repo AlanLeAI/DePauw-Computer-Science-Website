@@ -44,6 +44,7 @@ import { PublickeyencComponent } from './courses/csc340/publickeyenc/publickeyen
 import { StackComponent } from './courses/csc122/stack/stack.component';
 import { QueueComponent } from './courses/csc122/queue/queue.component';
 import { DoublylinkedlistComponent } from './courses/csc122/doublylinkedlist/doublylinkedlist.component';
+import { DfsbfsComponent } from './courses/csc122/dfsbfs/dfsbfs.component';
 
 
 @NgModule({
@@ -87,6 +88,7 @@ import { DoublylinkedlistComponent } from './courses/csc122/doublylinkedlist/dou
     StackComponent,
     QueueComponent,
     DoublylinkedlistComponent,
+    DfsbfsComponent,
   ],
   imports: [
     BrowserModule,
